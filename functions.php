@@ -3,7 +3,7 @@ require_once __DIR__.'/vendor/autoload.php';
 
 $themename = "cardoor";
 $shortname = "ct";
-//require_once __DIR__.'/classes/Main_New_Walker.php';
+require_once __DIR__.'/classes/Main_New_Walker.php';
 
 require_once  __DIR__.'/tgm/tgm.php';
 ;
