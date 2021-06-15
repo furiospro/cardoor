@@ -1,0 +1,52 @@
+<?php if ( ! defined( 'FW' ) ) {
+	die( 'Forbidden' );
+}
+
+$options = array(
+	'add_title' =>array(
+		'type'=> 'checkbox',
+		'label'=>__('Add a Title for modal form','fw'),
+		'value'=>''
+	),
+	'title'  => array(
+		'label' => __( 'Title Label', 'fw' ),
+		'desc'  => __( 'This is the Title of modal form', 'fw' ),
+		'type'  => 'text',
+	),
+	'link'   => array(
+		'label' => __( 'Button Link', 'fw' ),
+		'desc'  => __( 'Where should your button link to', 'fw' ),
+		'type'  => 'text',
+		'value' => '#'
+	),
+	'target' => array(
+		'type'  => 'switch',
+		'label'   => __( 'Open Link in New Window', 'fw' ),
+		'desc'    => __( 'Select here if you want to open the linked page in a new window', 'fw' ),
+		'right-choice' => array(
+			'value' => '_blank',
+			'label' => __('Yes', 'fw'),
+		),
+		'left-choice' => array(
+			'value' => '_self',
+			'label' => __('No', 'fw'),
+		),
+	),
+	'color'  => array(
+		'label'   => __( 'Button Color', 'fw' ),
+		'desc'    => __( 'Choose a color for your button', 'fw' ),
+		'type'    => 'select',
+		'choices' => array(
+			''      => __('Default', 'fw'),
+			'black' => __( 'Black', 'fw' ),
+			'blue'  => __( 'Blue', 'fw' ),
+			'green' => __( 'Green', 'fw' ),
+			'red'   => __( 'Red', 'fw' ),
+		)
+	),
+	'btn_class'  => array(
+		'label' => __( 'Button Class', 'fw' ),
+		'desc'  => __( 'This is the class of button', 'fw' ),
+		'type'  => 'text'
+	)
+);

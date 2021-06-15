@@ -37,5 +37,10 @@ $options = array(
 		'type'=> 'text',
 		'label'=>__('Post type','fw'),
 		'desc'=> __('Enter a post type','fw')
+	),
+	'href_class' =>array(
+		'type'=> 'text',
+		'label'=>__('Class link','fw'),
+		'desc'=> __('Enter a class of link','fw')
 	)
 );

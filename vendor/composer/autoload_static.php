@@ -7,6 +7,10 @@ namespace Composer\Autoload;
 class ComposerStaticInit66aa625b4433d4d8cc7d41d0729ec24e
 {
     public static $prefixLengthsPsr4 = array (
+        't' => 
+        array (
+            'templates\\' => 10,
+        ),
         'c' => 
         array (
             'classes\\' => 8,
@@ -18,6 +22,10 @@ class ComposerStaticInit66aa625b4433d4d8cc7d41d0729ec24e
     );
 
     public static $prefixDirsPsr4 = array (
+        'templates\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/../templates',
+        ),
         'classes\\' => 
         array (
             0 => __DIR__ . '/../..' . '/../classes',
@@ -31,7 +39,10 @@ class ComposerStaticInit66aa625b4433d4d8cc7d41d0729ec24e
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'Main_New_Walker' => __DIR__ . '/../..' . '/classes/Main_New_Walker.php',
+        'classes\\GetImages' => __DIR__ . '/../..' . '/classes/GetImages.php',
         'classes\\Preg' => __DIR__ . '/../..' . '/classes/Preg.php',
+        'simple_html_dom' => __DIR__ . '/../..' . '/templates/simple_html_dom.php',
+        'simple_html_dom_node' => __DIR__ . '/../..' . '/templates/simple_html_dom.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

@@ -26,7 +26,7 @@ if ( ! empty( $atts['video'] ) ) {
 
 $section_style   = ( $bg_color || $bg_image ) ? 'style="' . esc_attr($bg_color . $bg_image) . '"' : '';
 
-$container_class[]=( isset( $atts['is_fullwidth'] ) && $atts['is_fullwidth'] ) ? 'container-fluid' : 'container';
+$container_class[]=( isset( $atts['is_fullwidth'] ) && $atts['is_fullwidth'] ) ? 'container-fluid ' : 'container';
 $container_class []=( isset( $atts['custom_cont_class'] ) && $atts['custom_cont_class'] ) ?  $atts['custom_cont_class']: '';
 $custom_id = ( isset( $atts['custom_id'] ) && $atts['custom_id'] ) ? 'custom_id' : '';
 $conclass = implode(' ',$container_class);

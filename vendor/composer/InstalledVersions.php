@@ -20,43 +20,38 @@ use Composer\Semver\VersionParser;
 
 
 
-
-
 class InstalledVersions
 {
 private static $installed = array (
   'root' => 
   array (
-    'pretty_version' => '1.0.0+no-version-set',
-    'version' => '1.0.0.0',
+    'pretty_version' => 'dev-master',
+    'version' => 'dev-master',
     'aliases' => 
     array (
     ),
-    'reference' => NULL,
+    'reference' => '91c4cb2b4c575f84ac20e7c6010d6d27e2fead4d',
     'name' => '__root__',
-    'dev' => true,
   ),
   'versions' => 
   array (
     '__root__' => 
     array (
-      'pretty_version' => '1.0.0+no-version-set',
-      'version' => '1.0.0.0',
+      'pretty_version' => 'dev-master',
+      'version' => 'dev-master',
       'aliases' => 
       array (
       ),
-      'reference' => NULL,
-      'dev-requirement' => false,
+      'reference' => '91c4cb2b4c575f84ac20e7c6010d6d27e2fead4d',
     ),
     'phpmailer/phpmailer' => 
     array (
-      'pretty_version' => 'v6.4.0',
-      'version' => '6.4.0.0',
+      'pretty_version' => 'v6.4.1',
+      'version' => '6.4.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => '050d430203105c27c30efd1dce7aa421ad882d01',
-      'dev-requirement' => false,
+      'reference' => '9256f12d8fb0cd0500f93b19e18c356906cbed3d',
     ),
   ),
 );
@@ -76,6 +71,7 @@ foreach (self::getInstalled() as $installed) {
 $packages[] = array_keys($installed['versions']);
 }
 
+
 if (1 === \count($packages)) {
 return $packages[0];
 }
@@ -91,17 +87,17 @@ return array_keys(array_flip(\call_user_func_array('array_merge', $packages)));
 
 
 
-
-public static function isInstalled($packageName, $includeDevRequirements = true)
+public static function isInstalled($packageName)
 {
 foreach (self::getInstalled() as $installed) {
 if (isset($installed['versions'][$packageName])) {
-return $includeDevRequirements || empty($installed['versions'][$packageName]['dev-requirement']);
+return true;
 }
 }
 
 return false;
 }
+
 
 
 
@@ -267,7 +263,6 @@ public static function reload($data)
 self::$installed = $data;
 self::$installedByVendor = array();
 }
-
 
 
 

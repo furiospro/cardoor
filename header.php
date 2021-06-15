@@ -60,7 +60,7 @@
 			<div class="row">
 				<!--== Logo Start ==-->
 				<div class="col-lg-4">
-					<a href="index.html" class="logo">
+					<a href="<?php echo site_url(); ?>" class="logo">
 						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" alt="JSOFT">
 					</a>
 				</div>

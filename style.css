@@ -2247,7 +2247,7 @@ body,
 .car-list-thumb {
 	background-size: cover;
 	background-position: center center;
-	width: 500px;
+	width: 470px;
 	height: 300px;
 }
 
@@ -2549,6 +2549,7 @@ body,
 }
 
 .car-preview-crousel .owl-dots {
+
 	background-color: rgba(0, 0, 0, 0.5);
 	margin-top: -33px;
 	padding: 5px;
@@ -2617,7 +2618,9 @@ body,
 	padding: 15px;
 }
 
-.input-submit button {
+.input-submit button,.input-submit a {
+	display: inline-block;
+	color:black !important;
 	background-color: #ffd000;
 	border: medium none;
 	cursor: pointer;
@@ -3230,4 +3233,14 @@ body,
 }
 .art-row-right{
 	flex-direction:row-reverse;
+}
+.erId{
+	color: red;
+	font-size: 1rem;
+	font-weight: bold;
+}
+.reg-complete{
+	width: 75%;
+	margin: auto;
+	text-align:center;
 }

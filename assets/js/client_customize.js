@@ -30,6 +30,8 @@
 		} );
 	});
 })(jQuery);
+
+
 function rusToWin(str) {
 
 	str = str.toLowerCase(); // все в нижний регистр

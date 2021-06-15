@@ -5,6 +5,9 @@
 
     jQuery(document).ready(function ($) {
 
+
+       // $('.book-now-btn').on('click',bookCar);
+
 		$('.pagination li').children().each(function(){
 			if($(this).hasClass('active')===true){
 				$(this).parent().addClass('active');
@@ -298,6 +301,5 @@
         jQuery('body').removeClass('loader-active');
         jQuery(".popular-car-gird").isotope();
     }); //window load End
-
 
 }(jQuery));

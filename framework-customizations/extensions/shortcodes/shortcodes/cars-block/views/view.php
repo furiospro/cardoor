@@ -19,7 +19,7 @@ $query = new WP_Query([
 <div class="tab-content" id="myTabContent">
 
 	<div class="tab-pane fade active show" id="popular_cars" role="tabpanel" aria-labelledby="home-tab">
-		<
+
 		<div class="popular-cars-wrap">
 
 			<div class="popucar-menu text-center">
@@ -44,7 +44,7 @@ $query = new WP_Query([
 					<div class="<?php echo $atts['post_class']; ?> <?php echo $type; ?>">
 						<div class="<?php echo $atts['subpost_class']; ?>">
 							<div class="<?php echo $atts['thumb_class']; ?>">
-								<a href="<?php the_permalink(); ?>" <?php if(!empty($atts['href_class'])): ?> class="<?php echo $atts['href_class']; ?>"<?php endif; ?>>
+								<a href="<?php the_post_thumbnail_url(); ?>" <?php if(!empty($atts['href_class'])): ?> class="<?php echo $atts['href_class']; ?>"<?php endif; ?>>
 									<div class="<?php echo $atts['class']; ?>">
 										<?php if(has_post_thumbnail()): ?>
 
@@ -55,7 +55,7 @@ $query = new WP_Query([
 							</div>
 							<div class="p-car-content">
 								<h3>
-									<a href="#"><?php the_title(); ?></a>
+									<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 									<span class="price">
 					 <i class="fa fa-tag"><?php echo $price; ?>/DAY</i>
 				 </span>
