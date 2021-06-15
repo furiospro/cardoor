@@ -6,8 +6,13 @@ require_once __DIR__.'/vendor/autoload.php';
 
 $themename = "cardoor";
 $shortname = "ct";
+<<<<<<< HEAD
 //require_once __DIR__.'/classes/WP_Comments_List_Table.php';
 //require_once $_SERVER['DOCUMENT_ROOT'].'/wp-admin/includes/class-wp-comments-list-table.php';
+=======
+//require_once __DIR__.'/classes/Main_New_Walker.php';
+
+>>>>>>> 7345f7615261a54ee692a33982c7f96adeee1b77
 require_once  __DIR__.'/tgm/tgm.php';
 add_action('wp_enqueue_scripts','cardoor_style');
 function cardoor_style(){
@@ -364,6 +369,7 @@ function my_custom_init(){
 	//register_taxonomy_for_object_type('cars','car');
 }
 
+<<<<<<< HEAD
 
 add_filter('admin_comment_types_dropdown','commtype');
 function commtype(){
@@ -1145,3 +1151,13 @@ if(wp_doing_ajax()){
 
 
 //add_action('before_post_content',[new classes\Preg],'preg');
+=======
+add_action( 'manage_posts_custom_column', 'true_fill_post_columns', 10, 1 );
+add_action('customize_preview_init','client_customize_js');
+add_action('after_setup_theme','cardoor_setup');
+//add_action('admin_menu',function(){remove_menu_page('edit-comments.php');});
+add_action('customize_register','client_customize');
+add_action('wp_enqueue_scripts','cardoor_style');
+add_action('widgets_init','cardoor_widget');
+//add_action('before_post_content',[new classes\Preg],'preg');
+>>>>>>> 7345f7615261a54ee692a33982c7f96adeee1b77
